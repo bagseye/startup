@@ -9,7 +9,7 @@ const Banner = () => {
       file(relativePath: { eq: "macbook-pad.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 90) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -23,7 +23,9 @@ const Banner = () => {
         fluid={data.file.childImageSharp.fluid}
         backgroundColor={`#040e18`}
       >
-        <h1>The Title</h1>
+        <div className="hero-content">
+          <h1> Aliquam lectus lectus, pellentesque vel orci eu</h1>
+        </div>
       </BackgroundImage>
     </BannerWrapper>
   )
@@ -32,6 +34,37 @@ const Banner = () => {
 const BannerWrapper = styled.section`
   .gatsby-image-wrapper {
     height: 100vh;
+    color: #fff;
+
+    .hero-content {
+      text-align: center;
+      height: 100%;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 900;
+      }
+
+      @media (min-width: 768px) {
+        max-width: 800px;
+
+        h1 {
+          font-size: 3rem;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        h1 {
+          font-size: 4rem;
+        }
+      }
+    }
   }
 `
 

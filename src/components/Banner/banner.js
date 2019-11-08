@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
+import Button from "../Button/button"
 
 const Banner = () => {
   const data = useStaticQuery(graphql`
@@ -25,6 +26,7 @@ const Banner = () => {
       >
         <div className="hero-content">
           <h1> Aliquam lectus lectus, pellentesque vel orci eu</h1>
+          <Button cta="Learn More" anchor={true} href="linking" />
         </div>
       </BackgroundImage>
     </BannerWrapper>
@@ -49,6 +51,11 @@ const BannerWrapper = styled.section`
       h1 {
         font-size: 2rem;
         font-weight: 900;
+      }
+
+      button,
+      .anchor {
+        margin: 0 auto;
       }
 
       @media (min-width: 768px) {

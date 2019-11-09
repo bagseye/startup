@@ -25,7 +25,7 @@ const Banner = () => {
         backgroundColor={`#040e18`}
       >
         <div className="hero-content">
-          <h1> Aliquam lectus lectus, pellentesque vel orci eu</h1>
+          <h1>It's time to make your business stand out</h1>
           <Button cta="Learn More" anchor={true} href="linking" />
         </div>
       </BackgroundImage>
@@ -49,7 +49,7 @@ const BannerWrapper = styled.section`
       margin-right: auto;
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
         font-weight: 900;
       }
 

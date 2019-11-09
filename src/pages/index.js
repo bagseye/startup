@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../components/layout"
 import Banner from "../components/Banner/banner"
 import TextBlock from "../components/TextBlock/textBlock"
+import TextBlockImg from "../components/TextBlockImg/textBlockImg"
+import Perk from "../components/Perk/perk"
 import Button from "../components/Button/button"
 
 export default () => (
@@ -23,6 +25,24 @@ export default () => (
       >
         <Button cta="I'm in!" anchor={true} href="/" />
       </TextBlock>
+      <TextBlockImg title="We have the tools to help you suceed">
+        <p>Some content</p>
+        <Perk
+          title="Speedy"
+          content=" Vivamus consequat, orci non tincidunt
+          efficitur, libero purus sollicitudin mi"
+        />
+        <Perk
+          title="Affordable"
+          content=" Vivamus consequat, orci non tincidunt
+          efficitur, libero purus sollicitudin mi"
+        />
+        <Perk
+          title="Friendly"
+          content=" Vivamus consequat, orci non tincidunt
+          efficitur, libero purus sollicitudin mi"
+        />
+      </TextBlockImg>
     </Layout>
   </>
 )

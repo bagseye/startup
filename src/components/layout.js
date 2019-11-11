@@ -30,6 +30,10 @@ const LayoutWrapper = styled.div`
     font-size: 2rem;
   }
 
+  h3 {
+    font-size: 1.5rem;
+  }
+
   p {
     font-size: 1.2rem;
     line-height: 1.4;
@@ -39,6 +43,10 @@ const LayoutWrapper = styled.div`
     margin: 0 auto;
     width: 100%;
     max-width: 850px;
+  }
+
+  .flex-container {
+    display: flex;
   }
 `
 

@@ -6,6 +6,10 @@ import TextBlockImg from "../components/TextBlockImg/textBlockImg"
 import Perk from "../components/Perk/perk"
 import Button from "../components/Button/button"
 
+import perk1Img from "../images/speed.svg"
+import perk2Img from "../images/piggy-bank.svg"
+import perk3Img from "../images/friendly-staff.svg"
+
 export default () => (
   <>
     <Layout>
@@ -27,21 +31,29 @@ export default () => (
       </TextBlock>
       <TextBlockImg title="We have the tools to help you suceed">
         <p>Some content</p>
-        <Perk
-          title="Speedy"
-          content=" Vivamus consequat, orci non tincidunt
+        <div className="flex-container">
+          <Perk
+            img={perk1Img}
+            alt="Super fast speed increases"
+            title="Speedy"
+            content=" Vivamus consequat, orci non tincidunt
           efficitur, libero purus sollicitudin mi"
-        />
-        <Perk
-          title="Affordable"
-          content=" Vivamus consequat, orci non tincidunt
+          />
+          <Perk
+            img={perk2Img}
+            alt="Great savings to be made"
+            title="Affordable"
+            content=" Vivamus consequat, orci non tincidunt
           efficitur, libero purus sollicitudin mi"
-        />
-        <Perk
-          title="Friendly"
-          content=" Vivamus consequat, orci non tincidunt
+          />
+          <Perk
+            img={perk3Img}
+            alt="Super fast speed increases"
+            title="Friendly"
+            content=" Vivamus consequat, orci non tincidunt
           efficitur, libero purus sollicitudin mi"
-        />
+          />
+        </div>
       </TextBlockImg>
     </Layout>
   </>

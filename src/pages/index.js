@@ -5,6 +5,7 @@ import TextBlock from "../components/TextBlock/textBlock"
 import TextBlockImg from "../components/TextBlockImg/textBlockImg"
 import Perk from "../components/Perk/perk"
 import Button from "../components/Button/button"
+import Packages from "../components/Packages/packages"
 import Package from "../components/Package/package"
 
 import perk1Img from "../images/speed.svg"
@@ -62,20 +63,35 @@ export default () => (
           />
         </div>
       </TextBlockImg>
-      <section>
-        <h2>Our Packages</h2>
-        <div className="flex-container trio-block">
-          <Package title="Standard">
-            <Button cta="I want this!" />
-          </Package>
-          <Package title="Super" active={true}>
-            <Button cta="I want this!" />
-          </Package>
-          <Package title="Hyper">
-            <Button cta="I want this!" />
-          </Package>
-        </div>
-      </section>
+      <Packages title="Our Packages">
+        <Package title="Standard">
+          <ul>
+            <li>Great for teams</li>
+            <li>Great for teams</li>
+            <li className="linethrough">Great for teams</li>
+            <li className="linethrough">Great for teams</li>
+          </ul>
+          <Button cta="I want this!" />
+        </Package>
+        <Package title="Super" active={true}>
+          <ul>
+            <li>Great for teams</li>
+            <li>Great for teams</li>
+            <li>Great for teams</li>
+            <li>Great for teams</li>
+          </ul>
+          <Button cta="I want this!" />
+        </Package>
+        <Package title="Hyper">
+          <ul>
+            <li>Great for teams</li>
+            <li>Great for teams</li>
+            <li>Great for teams</li>
+            <li className="linethrough">Great for teams</li>
+          </ul>
+          <Button cta="I want this!" />
+        </Package>
+      </Packages>
     </Layout>
   </>
 )

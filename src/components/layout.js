@@ -57,6 +57,14 @@ const LayoutWrapper = styled.div`
       }
     }
   }
+
+  .section-padding {
+    padding: 100px 30px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
 `
 
 export default Layout

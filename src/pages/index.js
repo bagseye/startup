@@ -5,6 +5,7 @@ import TextBlock from "../components/TextBlock/textBlock"
 import TextBlockImg from "../components/TextBlockImg/textBlockImg"
 import Perk from "../components/Perk/perk"
 import Button from "../components/Button/button"
+import Package from "../components/Package/package"
 
 import perk1Img from "../images/speed.svg"
 import perk2Img from "../images/piggy-bank.svg"
@@ -30,8 +31,14 @@ export default () => (
         <Button cta="I'm in!" anchor={true} href="/" />
       </TextBlock>
       <TextBlockImg title="We have the tools to help you suceed">
-        <p>Some content</p>
-        <div className="flex-container">
+        <p>
+          {" "}
+          Sed ac posuere urna. Vivamus non sodales dui. Nulla posuere quam eget
+          nisl viverra, placerat posuere justo scelerisque. Aenean sagittis orci
+          odio. Donec id augue metus. Donec ligula diam, tempor sed mi in,
+          auctor ultrices ipsum.
+        </p>
+        <div className="flex-container trio-block">
           <Perk
             img={perk1Img}
             alt="Super fast speed increases"
@@ -55,6 +62,20 @@ export default () => (
           />
         </div>
       </TextBlockImg>
+      <section>
+        <h2>Our Packages</h2>
+        <div className="flex-container trio-block">
+          <Package title="Standard">
+            <Button cta="I want this!" />
+          </Package>
+          <Package title="Super" active={true}>
+            <Button cta="I want this!" />
+          </Package>
+          <Package title="Hyper">
+            <Button cta="I want this!" />
+          </Package>
+        </div>
+      </section>
     </Layout>
   </>
 )

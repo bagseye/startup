@@ -14,6 +14,7 @@ const Layout = ({ children }) => {
 const LayoutWrapper = styled.div`
   font-family: "Gothic A1", sans-serif;
   color: #fff;
+  background-color: #060c21;
 
   h1,
   h2,
@@ -47,6 +48,14 @@ const LayoutWrapper = styled.div`
 
   .flex-container {
     display: flex;
+
+    &.trio-block {
+      flex-direction: column;
+
+      @media (min-width: 992px) {
+        flex-direction: row;
+      }
+    }
   }
 `
 

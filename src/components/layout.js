@@ -2,11 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import "typeface-gothic-a1"
 import "./reset.css"
+import Footer from "../components/Footer/footer"
 
 const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
       <div className="layout">{children}</div>
+      <Footer />
     </LayoutWrapper>
   )
 }

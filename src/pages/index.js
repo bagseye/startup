@@ -7,6 +7,7 @@ import Perk from "../components/Perk/perk"
 import Button from "../components/Button/button"
 import Packages from "../components/Packages/packages"
 import Package from "../components/Package/package"
+import Contact from "../components/Contact/contact"
 
 import perk1Img from "../images/speed.svg"
 import perk2Img from "../images/piggy-bank.svg"
@@ -92,6 +93,7 @@ export default () => (
           <Button cta="I want this!" />
         </Package>
       </Packages>
+      <Contact title="Get in Touch" />
     </Layout>
   </>
 )

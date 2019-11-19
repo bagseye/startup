@@ -9,7 +9,7 @@ const Button = props => {
           {props.cta}
         </ButtonWrapper>
       ) : (
-        <ButtonWrapper>{props.cta}</ButtonWrapper>
+        <ButtonWrapper type={props.type}>{props.cta}</ButtonWrapper>
       )}
     </>
   )
@@ -32,6 +32,7 @@ const ButtonWrapper = styled.button`
   background-size: 400%;
   border-radius: 30px;
   border: none;
+  z-index: 1;
 
   &:hover {
     cursor: pointer;

@@ -1,0 +1,154 @@
+import React, { useState } from "react"
+import { Link } from "gatsby"
+import links from "../../constants/links"
+import styled from "styled-components"
+
+const Navbar = () => {
+  const [isOpen, setNav] = useState(false)
+
+  const toggleNav = () => {
+    setNav(isOpen => !isOpen)
+  }
+  return (
+    <NavWrapper>
+      <div className="masthead flex-container">
+        <h2>Startup</h2>
+        <button
+          className={
+            isOpen
+              ? `${"toggle-btn"} ${"toggle-btn-active"}`
+              : `${"toggle-btn"}`
+          }
+          type="button"
+          onClick={toggleNav}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <ul
+        className={isOpen ? `${"nav-links"} ${"show-nav"}` : `${"nav-links"}`}
+      >
+        {links.map((item, index) => {
+          return (
+            <li key={index}>
+              <Link to={item.path}>{item.text}</Link>
+            </li>
+          )
+        })}
+      </ul>
+    </NavWrapper>
+  )
+}
+
+const NavWrapper = styled.nav`
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  .masthead {
+    z-index: 3;
+    width: 100%;
+    padding: 10px 15px;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    text-align: center;
+    background-color: #060c21;
+    margin: 0;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: 0.3s ease-in;
+    list-style: none;
+
+    li {
+      list-style: none;
+      font-size: 1.25rem;
+      font-weight: 900;
+      margin-left: 1rem;
+      padding: 0.75rem 0;
+      a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: #fff;
+      }
+    }
+
+    &.show-nav {
+      transform: translateX(0%);
+    }
+  }
+
+  .toggle-btn {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+
+    span {
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: #fff;
+      transition: 0.2s ease-in;
+
+      &:nth-child(1) {
+        transform: translateY(-5px);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(5px);
+      }
+    }
+
+    &.toggle-btn-active {
+      span {
+        &:nth-child(1) {
+          transform: translateY(2px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-2px) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .toggle-btn {
+      display: none;
+    }
+
+    .nav-links {
+      flex-direction: row;
+      margin-left: auto;
+    }
+  }
+`
+
+export default Navbar

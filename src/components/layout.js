@@ -2,11 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import "typeface-gothic-a1"
 import "./reset.css"
+import Navbar from "../components/Navbar/navbar"
 import Footer from "../components/Footer/footer"
 
 const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
+      <Navbar />
       <div className="layout">{children}</div>
       <Footer />
     </LayoutWrapper>
@@ -14,6 +16,12 @@ const Layout = ({ children }) => {
 }
 
 const LayoutWrapper = styled.div`
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
   font-family: "Gothic A1", sans-serif;
   color: #fff;
   background-color: #060c21;

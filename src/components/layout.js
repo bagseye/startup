@@ -18,8 +18,6 @@ const Layout = ({ children }) => {
 const LayoutWrapper = styled.div`
   * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
   }
 
   font-family: "Gothic A1", sans-serif;

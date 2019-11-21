@@ -30,6 +30,10 @@ const FooterWrapper = styled.footer`
     color: #fff;
     font-size: 1.75rem;
     padding: 0 0.5rem;
+
+    svg {
+      vertical-align: middle;
+    }
   }
 `
 

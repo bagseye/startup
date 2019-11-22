@@ -37,6 +37,12 @@ const PackageWrapper = styled.article`
 
       li {
         line-height: 26px;
+        padding-left: 0.5rem;
+
+        &::marker {
+          content: "Yes";
+          display: inline-block;
+        }
       }
 
       .linethrough {

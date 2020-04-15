@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-const TextBlock = ({ title, paragraph, children }) => {
+const TextBlock = ({ title, paragraph, children, id }) => {
   return (
-    <TextBlockWrapper>
+    <TextBlockWrapper id={id}>
       <div className="content-container">
         <h2>{title}</h2>
         <p>{paragraph}</p>

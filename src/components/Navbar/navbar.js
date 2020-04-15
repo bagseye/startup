@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import links from "../../constants/links"
 import styled from "styled-components"
+import { Link, animateScroll as scroll } from "react-scroll"
 
 const Navbar = () => {
   const [isOpen, setNav] = useState(false)
@@ -33,7 +33,16 @@ const Navbar = () => {
         {links.map((item, index) => {
           return (
             <li key={index}>
-              <Link to={item.path}>{item.text}</Link>
+              <Link
+                activeClass="active"
+                to={item.text}
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-50}
+              >
+                {item.text}
+              </Link>
             </li>
           )
         })}
@@ -93,8 +102,13 @@ const NavWrapper = styled.nav`
         text-transform: capitalize;
         color: #fff;
         transition: 0.3s;
+
+        &.active {
+          color: #e609b5;
+        }
       }
       &:hover {
+        cursor: pointer;
         a {
           color: #e609b5;
         }

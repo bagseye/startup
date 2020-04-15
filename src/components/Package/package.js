@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const Package = ({ title, children, active }) => {
   return (
-    <PackageWrapper className={active ? "active" : "not-active"}>
+    <PackageWrapper id="packages" className={active ? "active" : "not-active"}>
       <div className="content">
         <h3>{title}</h3>
         {children}

@@ -4,7 +4,7 @@ import Button from "../Button/button"
 
 const Contact = ({ title }) => {
   return (
-    <ContactWrapper>
+    <ContactWrapper id="contact">
       <div className="container">
         <h2>{title}</h2>
         <form name="contact" netlify>

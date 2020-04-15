@@ -18,6 +18,7 @@ export default () => (
     <Layout>
       <Banner />
       <TextBlock
+        id="about"
         title="Aliquam id pulvinar lorem, nec rutrum nunc. Phasellus eu velit eu est
           scelerisque sodales"
         paragraph="Cras ut finibus urna. Nulla convallis ut nunc vel faucibus. Etiam

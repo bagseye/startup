@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 import Button from "../Button/button"
+import { Link } from "react-scroll"
 
 const Banner = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +27,9 @@ const Banner = () => {
       >
         <div className="hero-content">
           <h1>It's time to make your business stand out</h1>
-          <Button cta="Learn More" anchor={true} href="linking" />
+          <Link to="about" smooth={true} duration={500}>
+            <Button cta="Learn More" anchor={true} href="linking" />
+          </Link>
         </div>
       </BackgroundImage>
     </BannerWrapper>

@@ -4,6 +4,7 @@ import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 import Button from "../Button/button"
 import { Link } from "react-scroll"
+import { motion } from "framer-motion"
 
 const Banner = () => {
   const data = useStaticQuery(graphql`
@@ -17,6 +18,12 @@ const Banner = () => {
       }
     }
   `)
+
+  const variants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 20 },
+  }
+
   return (
     <BannerWrapper>
       <BackgroundImage
@@ -26,7 +33,14 @@ const Banner = () => {
         backgroundColor={`#040e18`}
       >
         <div className="hero-content">
-          <h1>It's time to make your business stand out</h1>
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+            transition={{ ease: "easeOut", duration: 0.8, delay: 1 }}
+          >
+            It's time to make your business stand out
+          </motion.h1>
           <Link to="about" smooth={true} duration={500}>
             <Button cta="Learn More" anchor={true} href="linking" />
           </Link>

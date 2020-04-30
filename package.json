@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
+    "framer-motion": "^1.10.3",
     "gatsby": "^2.20.22",
     "gatsby-background-image": "^0.8.18",
     "gatsby-image": "^2.2.30",
@@ -25,6 +26,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-icons": "^3.10.0",
+    "react-intersection-observer": "^8.26.2",
     "react-scroll": "^1.7.16",
     "react-sticky": "^6.0.3",
     "styled-components": "^4.4.1",

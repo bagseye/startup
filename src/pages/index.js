@@ -14,7 +14,7 @@ import perk2Img from "../images/piggy-bank.svg"
 import perk3Img from "../images/friendly-staff.svg"
 
 import { IconContext } from "react-icons"
-import { TiTick, TiTimes } from "react-icons/ti"
+import { MdDone, MdClear } from "react-icons/md"
 
 export default () => (
   <>
@@ -72,26 +72,26 @@ export default () => (
         <IconContext.Provider
           value={{
             color: "#7FFF00",
-            size: "1.35em",
+            size: "1.15em",
             style: { verticalAlign: "middle" },
           }}
         >
           <Package title="Standard">
             <ul>
               <li>
-                <TiTick />
+                <MdDone />
                 Great for teams
               </li>
               <li>
-                <TiTick />
+                <MdDone />
                 Great for teams
               </li>
               <li className="linethrough">
-                <TiTimes color="red" />
+                <MdClear color="red" />
                 Great for teams
               </li>
               <li className="linethrough">
-                <TiTimes color="red" />
+                <MdClear color="red" />
                 Great for teams
               </li>
             </ul>
@@ -100,19 +100,19 @@ export default () => (
           <Package title="Super" active={true}>
             <ul>
               <li>
-                <TiTick />
+                <MdDone />
                 Great for teams
               </li>
               <li>
-                <TiTick />
+                <MdDone />
                 Great for teams
               </li>
               <li>
-                <TiTick />
+                <MdDone />
                 Great for teams
               </li>
               <li>
-                <TiTick />
+                <MdDone />
                 Great for teams
               </li>
             </ul>
@@ -121,19 +121,19 @@ export default () => (
           <Package title="Hyper">
             <ul>
               <li>
-                <TiTick />
+                <MdDone />
                 Great for teams
               </li>
               <li>
-                <TiTick />
+                <MdDone />
                 Great for teams
               </li>
               <li>
-                <TiTick />
+                <MdDone />
                 Great for teams
               </li>
               <li className="linethrough">
-                <TiTimes color="red" />
+                <MdClear color="red" />
                 Great for teams
               </li>
             </ul>

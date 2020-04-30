@@ -38,11 +38,6 @@ const PackageWrapper = styled.article`
       li {
         line-height: 26px;
         padding-left: 0.5rem;
-
-        /* &::marker {
-          content: "Yes";
-          display: inline-block;
-        } */
       }
 
       .linethrough {
@@ -62,7 +57,6 @@ const PackageWrapper = styled.article`
   &.active {
     order: 1;
     z-index: 3;
-    transform: scale(1.09);
 
     @media (min-width: 992px) {
       order: 0;

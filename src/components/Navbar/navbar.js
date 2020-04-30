@@ -69,7 +69,15 @@ const NavWrapper = styled.nav`
     justify-content: space-between;
 
     img {
-      width: 135px;
+      width: 90px;
+
+      @media (min-width: 768px) {
+        width: 100px;
+      }
+
+      @media (min-width: 1200px) {
+        width: 120px;
+      }
     }
   }
 

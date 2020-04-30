@@ -24,7 +24,7 @@
     "normalize.css": "^8.0.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-icons": "^3.8.0",
+    "react-icons": "^3.10.0",
     "react-scroll": "^1.7.16",
     "react-sticky": "^6.0.3",
     "styled-components": "^4.4.1",

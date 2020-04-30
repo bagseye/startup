@@ -39,10 +39,10 @@ const PackageWrapper = styled.article`
         line-height: 26px;
         padding-left: 0.5rem;
 
-        &::marker {
+        /* &::marker {
           content: "Yes";
           display: inline-block;
-        }
+        } */
       }
 
       .linethrough {

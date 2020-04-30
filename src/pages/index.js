@@ -13,6 +13,9 @@ import perk1Img from "../images/speed.svg"
 import perk2Img from "../images/piggy-bank.svg"
 import perk3Img from "../images/friendly-staff.svg"
 
+import { IconContext } from "react-icons"
+import { TiTick, TiTimes } from "react-icons/ti"
+
 export default () => (
   <>
     <Layout>
@@ -66,33 +69,77 @@ export default () => (
         </div>
       </TextBlockImg>
       <Packages title="Our Packages">
-        <Package title="Standard">
-          <ul>
-            <li>Great for teams</li>
-            <li>Great for teams</li>
-            <li className="linethrough">Great for teams</li>
-            <li className="linethrough">Great for teams</li>
-          </ul>
-          <Button cta="I want this!" />
-        </Package>
-        <Package title="Super" active={true}>
-          <ul>
-            <li>Great for teams</li>
-            <li>Great for teams</li>
-            <li>Great for teams</li>
-            <li>Great for teams</li>
-          </ul>
-          <Button cta="I want this!" />
-        </Package>
-        <Package title="Hyper">
-          <ul>
-            <li>Great for teams</li>
-            <li>Great for teams</li>
-            <li>Great for teams</li>
-            <li className="linethrough">Great for teams</li>
-          </ul>
-          <Button cta="I want this!" />
-        </Package>
+        <IconContext.Provider
+          value={{
+            color: "#7FFF00",
+            size: "1.35em",
+            style: { verticalAlign: "middle" },
+          }}
+        >
+          <Package title="Standard">
+            <ul>
+              <li>
+                <TiTick />
+                Great for teams
+              </li>
+              <li>
+                <TiTick />
+                Great for teams
+              </li>
+              <li className="linethrough">
+                <TiTimes color="red" />
+                Great for teams
+              </li>
+              <li className="linethrough">
+                <TiTimes color="red" />
+                Great for teams
+              </li>
+            </ul>
+            <Button cta="I want this!" />
+          </Package>
+          <Package title="Super" active={true}>
+            <ul>
+              <li>
+                <TiTick />
+                Great for teams
+              </li>
+              <li>
+                <TiTick />
+                Great for teams
+              </li>
+              <li>
+                <TiTick />
+                Great for teams
+              </li>
+              <li>
+                <TiTick />
+                Great for teams
+              </li>
+            </ul>
+            <Button cta="I want this!" />
+          </Package>
+          <Package title="Hyper">
+            <ul>
+              <li>
+                <TiTick />
+                Great for teams
+              </li>
+              <li>
+                <TiTick />
+                Great for teams
+              </li>
+              <li>
+                <TiTick />
+                Great for teams
+              </li>
+              <li className="linethrough">
+                <TiTimes color="red" />
+                Great for teams
+              </li>
+            </ul>
+            <Button cta="I want this!" />
+          </Package>
+        </IconContext.Provider>
       </Packages>
       <Contact title="Get in Touch" />
     </Layout>

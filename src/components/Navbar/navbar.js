@@ -180,7 +180,7 @@ const NavWrapper = styled.nav`
     }
 
     .nav-links {
-      background-color: transparent;
+      background: transparent;
       flex-direction: row;
       margin-left: auto;
       position: relative;

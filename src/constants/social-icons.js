@@ -1,18 +1,13 @@
 import React from "react"
-import { GoOctoface } from "react-icons/go"
-import { DiReact, DiMitlicence } from "react-icons/di"
+import { FaLinkedinIn, FaGithub } from "react-icons/fa"
 
 export default [
   {
-    icon: <GoOctoface />,
-    url: "/",
+    icon: <FaLinkedinIn />,
+    url: "https://www.linkedin.com/in/morgan-baker-developer-inverness/",
   },
   {
-    icon: <DiReact />,
-    url: "/",
-  },
-  {
-    icon: <DiMitlicence />,
-    url: "/",
+    icon: <FaGithub />,
+    url: "https://github.com/bagseye",
   },
 ]

@@ -132,7 +132,10 @@ export default () => (
           </Package>
         </IconContext.Provider>
       </Packages>
-      <Contact title="Get in Touch" />
+      <Contact
+        title="Contact Startup today and see how we can help your business grow"
+        subtitle="Every second counts when you're looking to get your new business started. Drop Startup a message and one of our representatives will be in contact"
+      />
     </Layout>
   </>
 )

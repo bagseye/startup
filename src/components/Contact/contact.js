@@ -2,11 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import Button from "../Button/button"
 
-const Contact = ({ title }) => {
+const Contact = ({ title, subtitle }) => {
   return (
     <ContactWrapper id="contact">
-      <div className="container">
+      <div className="content-container">
         <h2>{title}</h2>
+        <p>{subtitle}</p>
         <form name="contact" netlify>
           <div className="input-area">
             <input type="text" name="name" required autocomplete="off" />
@@ -47,14 +48,26 @@ const Contact = ({ title }) => {
 const ContactWrapper = styled.section`
   padding: 100px 30px;
 
-  .container {
+  .content-container {
     width: 100%;
-    max-width: 650px;
     margin: 0 auto;
 
     h2 {
-      text-align: center;
-      margin-bottom: 100px;
+      text-align: left;
+      background: -webkit-linear-gradient(45deg, #f441a5, #03a9f4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media (min-width: 768px) {
+        text-align: center;
+      }
+    }
+    p {
+      margin-bottom: 2rem;
+
+      @media (min-width: 768px) {
+        text-align: center;
+      }
     }
 
     form {
@@ -67,6 +80,7 @@ const ContactWrapper = styled.section`
 
         &.button-area {
           text-align: center;
+          margin-bottom: 0;
         }
       }
 
@@ -114,14 +128,8 @@ const ContactWrapper = styled.section`
           position: absolute;
           left: 0px;
           bottom: -1px;
-          height: 4px;
-          background: linear-gradient(
-            90deg,
-            #03a9f4,
-            #f441a5,
-            #ffeb3b,
-            #03a9f4
-          );
+          height: 1px;
+          background: linear-gradient(90deg, #f441a5, #03a9f4);
           width: 100%;
           transform: translateX(-100%);
           transition: transform 0.3s ease;

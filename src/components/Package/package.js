@@ -5,7 +5,7 @@ const Package = ({ title, children, active }) => {
   return (
     <PackageWrapper id="packages" className={active ? "active" : "not-active"}>
       <div className="content">
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         {children}
       </div>
     </PackageWrapper>
@@ -25,10 +25,18 @@ const PackageWrapper = styled.article`
   }
 
   .content {
-    background: #0b132e;
+    background: #051342;
     color: #fff;
     text-align: center;
     padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0px 0px 22px 7px rgba(0, 0, 0, 0.25);
+
+    h2 {
+      background: -webkit-linear-gradient(45deg, #f441a5, #03a9f4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     ul {
       padding-left: 0;
@@ -64,7 +72,7 @@ const PackageWrapper = styled.article`
     }
 
     .content {
-      background: #14214b;
+      background: #001559;
     }
 
     &::before {
@@ -77,6 +85,7 @@ const PackageWrapper = styled.article`
       background: linear-gradient(to right, #fc466b, #3f5efb);
       z-index: -1;
       transform: skew(3deg, 3deg);
+      border-radius: 4px;
     }
   }
 `

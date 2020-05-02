@@ -7,7 +7,11 @@ const Footer = () => {
     <FooterWrapper>
       <div className="credit">
         Designed & developed by{" "}
-        <a href="www.morganbaker.dev" target="_blank" rel="noopener noreferrer">
+        <a
+          href="http://www.morganbaker.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Morgan
         </a>
       </div>

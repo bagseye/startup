@@ -8,6 +8,7 @@ import Button from "../components/Button/button"
 import Packages from "../components/Packages/packages"
 import Package from "../components/Package/package"
 import Contact from "../components/Contact/contact"
+import { Link } from "react-scroll"
 
 import perk1Img from "../images/speed.svg"
 import perk2Img from "../images/piggy-bank.svg"
@@ -59,80 +60,89 @@ export default () => (
           />
         </div>
       </TextBlockImg>
-      <Packages title="Our Packages">
+      <Packages
+        title="Our Packages"
+        para="Choose the perfect solution for you. With benefits to suit all budgets Startup can offer amazing value and expert advice"
+      >
         <IconContext.Provider
           value={{
             color: "#7FFF00",
-            size: "1.15em",
-            style: { verticalAlign: "middle" },
+            size: "1.2em",
+            style: { verticalAlign: "middle", marginRight: "5px" },
           }}
         >
           <Package title="Standard">
             <ul>
               <li>
-                <MdDone />
-                Great for teams
+                <MdDone />1 User
               </li>
               <li>
                 <MdDone />
-                Great for teams
+                1GB Storage
               </li>
               <li className="linethrough">
                 <MdClear color="red" />
-                Great for teams
+                Dedicated Advisor
               </li>
               <li className="linethrough">
                 <MdClear color="red" />
-                Great for teams
+                24/7 Support
               </li>
             </ul>
-            <Button cta="I want this!" />
+            <Link to="contact" smooth={true} duration={500}>
+              <Button cta="I want this!" />
+            </Link>
           </Package>
-          <Package title="Super" active={true}>
+          <Package title="Hyper" active={true}>
             <ul>
               <li>
                 <MdDone />
-                Great for teams
+                24/7 Support
               </li>
               <li>
                 <MdDone />
-                Great for teams
+                Dedicated Advisor
               </li>
               <li>
                 <MdDone />
-                Great for teams
+                Unlimited Storage
               </li>
               <li>
                 <MdDone />
-                Great for teams
+                Unlimited Users
               </li>
             </ul>
-            <Button cta="I want this!" />
+            <Link to="contact" smooth={true} duration={500}>
+              <Button cta="I want this!" />
+            </Link>
           </Package>
-          <Package title="Hyper">
+          <Package title="Super">
             <ul>
               <li>
                 <MdDone />
-                Great for teams
+                10 Users
               </li>
               <li>
                 <MdDone />
-                Great for teams
+                500GB Storage
               </li>
               <li>
                 <MdDone />
-                Great for teams
+                Advice Support
               </li>
               <li className="linethrough">
                 <MdClear color="red" />
-                Great for teams
+                Dedicated Advisor
               </li>
             </ul>
-            <Button cta="I want this!" />
+            <Link to="contact" smooth={true} duration={500}>
+              <Button cta="I want this!" />
+            </Link>
           </Package>
         </IconContext.Provider>
       </Packages>
       <Contact
+        id="contact"
         title="Contact Startup today and see how we can help your business grow"
         subtitle="Every second counts when you're looking to get your new business started. Drop Startup a message and one of our representatives will be in contact"
       />

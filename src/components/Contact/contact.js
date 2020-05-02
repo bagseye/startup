@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Button from "../Button/button"
 
-const Contact = ({ title, subtitle }) => {
+const Contact = ({ title, subtitle, id }) => {
   return (
     <ContactWrapper id="contact">
       <div className="content-container">

@@ -7,7 +7,12 @@
 const path = require(`path`)
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Startup",
+    author: "Morgan Baker",
+    image: "/yellow-metal-design-decoration.jpg",
+    siteUrl: "https://www.morganbaker.dev",
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

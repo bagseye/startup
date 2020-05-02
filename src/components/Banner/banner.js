@@ -40,10 +40,15 @@ const Banner = () => {
           >
             It's time to make your business <span>stand out</span>
           </motion.h1>
-          <p>
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+            transition={{ ease: "easeOut", duration: 0.8, delay: 1.5 }}
+          >
             Startup is here to help you achieve your business and personal
             goals, all through a stylish theme
-          </p>
+          </motion.p>
           <Link to="about" smooth={true} duration={500}>
             <Button cta="Learn More" anchor={true} href="linking" />
           </Link>

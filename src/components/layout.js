@@ -86,6 +86,7 @@ const LayoutWrapper = styled.div`
 
     &.trio-block {
       flex-direction: column;
+      justify-content: center;
 
       @media (min-width: 992px) {
         flex-direction: row;

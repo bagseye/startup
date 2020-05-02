@@ -26,37 +26,35 @@ export default () => (
         title="Developing a new business is never easy, but Startup is here to help"
         paragraph="With a super-fast Gatsby powered website you have the perfect platform to get your idea off the ground. Its the perfect template to help turn your idea into a reality."
       >
-        <Button cta="Tell Me More!" anchor={true} href="/" />
+        <Link to="perks" smooth={true} duration={500}>
+          <Button cta="Tell Me More!" />
+        </Link>
       </TextBlock>
-      <TextBlockImg title="We have the tools to help you suceed">
-        <p>
-          {" "}
-          Sed ac posuere urna. Vivamus non sodales dui. Nulla posuere quam eget
-          nisl viverra, placerat posuere justo scelerisque. Aenean sagittis orci
-          odio. Donec id augue metus. Donec ligula diam, tempor sed mi in,
-          auctor ultrices ipsum.
-        </p>
+      <TextBlockImg
+        id="perks"
+        title="We have the tools to help you suceed"
+        subtitle="Startup is perfect for helping to to start and grow your business. As
+          you begin to gain new clients and expand you will see the benefits of
+          a super-fast Gatsby website"
+      >
         <div className="flex-container trio-block">
           <Perk
             img={perk1Img}
             alt="Super fast speed increases"
             title="Speedy"
-            content=" Vivamus consequat, orci non tincidunt
-          efficitur, libero purus sollicitudin mi"
+            content="Super-fast response times ensure your business is not affected"
           />
           <Perk
             img={perk2Img}
             alt="Great savings to be made"
             title="Affordable"
-            content=" Vivamus consequat, orci non tincidunt
-          efficitur, libero purus sollicitudin mi"
+            content="A choice of packages to suit every business type and size"
           />
           <Perk
             img={perk3Img}
             alt="Super fast speed increases"
             title="Friendly"
-            content=" Vivamus consequat, orci non tincidunt
-          efficitur, libero purus sollicitudin mi"
+            content="Advisors who are available 24/7, all with exprt knowledge"
           />
         </div>
       </TextBlockImg>

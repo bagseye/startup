@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "macbook-pad.jpg" }) {
+      file(relativePath: { eq: "flames.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -30,7 +30,6 @@ const Banner = () => {
         Tag="section"
         className="hero-image"
         fluid={data.file.childImageSharp.fluid}
-        backgroundColor={`#040e18`}
       >
         <div className="hero-content">
           <motion.h1
@@ -39,8 +38,12 @@ const Banner = () => {
             variants={variants}
             transition={{ ease: "easeOut", duration: 0.8, delay: 1 }}
           >
-            It's time to make your business stand out
+            It's time to make your business <span>stand out</span>
           </motion.h1>
+          <p>
+            Startup is here to help you achieve your business and personal
+            goals, all through a stylish theme
+          </p>
           <Link to="about" smooth={true} duration={500}>
             <Button cta="Learn More" anchor={true} href="linking" />
           </Link>
@@ -54,20 +57,48 @@ const BannerWrapper = styled.section`
   .gatsby-image-wrapper {
     height: 100vh;
     color: #fff;
+    }
 
     .hero-content {
       text-align: center;
       height: 100%;
-      width: 80%;
+      width: 100%;
+      max-width: 400px;
+      padding: 0 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       margin-left: auto;
       margin-right: auto;
 
+      @media (min-width: 768px) {
+        max-width: 650px;
+      }
+
       h1 {
         font-size: 1.75rem;
-        font-weight: 900;
+        line-height: 1.2;
+
+        span {
+          background: -webkit-linear-gradient(45deg, #f441a5, #03a9f4);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+        font-size: 1.15rem;
+
+        @media (min-width: 768px) {
+          font-size: 1.35rem;
+        }
+
+        @media (min-width: 1200px) {
+          font-size: 1.5rem;
+        }
       }
 
       button,

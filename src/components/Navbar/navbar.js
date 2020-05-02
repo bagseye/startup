@@ -87,7 +87,7 @@ const NavWrapper = styled.nav`
     justify-content: center;
     position: fixed;
     text-align: center;
-    background-color: #060c21;
+    background: linear-gradient(45deg, #060c21, #0d0139);
     margin: 0;
     height: 100%;
     top: 0;
@@ -102,7 +102,7 @@ const NavWrapper = styled.nav`
     li {
       list-style: none;
       font-size: 1.25rem;
-      font-weight: 900;
+      font-weight: 400;
       margin-left: 0;
       padding: 0.75rem 0;
       a {

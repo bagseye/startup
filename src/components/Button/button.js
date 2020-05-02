@@ -18,12 +18,12 @@ const Button = props => {
 const ButtonWrapper = styled.button`
   position: relative;
   display: inline-block;
-  width: 200px;
-  height: 60px;
+  padding: 0 20px;
+  height: 50px;
   text-align: center;
-  line-height: 60px;
+  line-height: 50px;
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.85rem;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
   text-decoration: none;

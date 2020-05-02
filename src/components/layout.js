@@ -38,6 +38,8 @@ const LayoutWrapper = styled.div`
   h2 {
     font-size: 1.5rem;
     font-weight: 400;
+    letter-spacing: -1px;
+    margin: 1rem 0;
 
     @media (min-width: 768px) {
       font-size: 1.6rem;
@@ -56,6 +58,7 @@ const LayoutWrapper = styled.div`
   p {
     font-size: 1rem;
     line-height: 1.45;
+    margin: 1rem 0;
 
     @media (min-width: 768px) {
       font-size: 1.1rem;

@@ -54,7 +54,7 @@ const Navbar = () => {
 
 const NavWrapper = styled.nav`
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   top: 0;
   width: 100%;
   left: 0;

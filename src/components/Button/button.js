@@ -5,11 +5,18 @@ const Button = props => {
   return (
     <>
       {props.anchor ? (
-        <ButtonWrapper className="anchor" as="a" href={props.href}>
+        <ButtonWrapper
+          aria-label={props.label}
+          className="anchor"
+          as="a"
+          href={props.href}
+        >
           {props.cta}
         </ButtonWrapper>
       ) : (
-        <ButtonWrapper type={props.type}>{props.cta}</ButtonWrapper>
+        <ButtonWrapper aria-label={props.label} type={props.type}>
+          {props.cta}
+        </ButtonWrapper>
       )}
     </>
   )

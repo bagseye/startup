@@ -27,7 +27,7 @@ export default () => (
         paragraph="With a super-fast Gatsby powered website you have the perfect platform to get your idea off the ground. Its the perfect template to help turn your idea into a reality."
       >
         <Link to="perks" smooth={true} duration={500}>
-          <Button cta="Tell Me More!" />
+          <Button label="Tell Me More" cta="Tell Me More!" />
         </Link>
       </TextBlock>
       <TextBlockImg
@@ -88,7 +88,7 @@ export default () => (
               </li>
             </ul>
             <Link to="contact" smooth={true} duration={500}>
-              <Button cta="I want this!" />
+              <Button label="I want this" cta="I want this!" />
             </Link>
           </Package>
           <Package title="Hyper" active={true}>
@@ -111,7 +111,7 @@ export default () => (
               </li>
             </ul>
             <Link to="contact" smooth={true} duration={500}>
-              <Button cta="I want this!" />
+              <Button label="I want this" cta="I want this!" />
             </Link>
           </Package>
           <Package title="Super">
@@ -134,7 +134,7 @@ export default () => (
               </li>
             </ul>
             <Link to="contact" smooth={true} duration={500}>
-              <Button cta="I want this!" />
+              <Button label="I want this" cta="I want this!" />
             </Link>
           </Package>
         </IconContext.Provider>

@@ -10,15 +10,27 @@ const Contact = ({ title, subtitle, id }) => {
         <p>{subtitle}</p>
         <form name="contact" netlify>
           <div className="input-area">
-            <input type="text" name="name" required autoComplete="off" />
-            <label className="label-name">
+            <input
+              type="text"
+              name="name"
+              aria-label="Name"
+              required
+              autoComplete="off"
+            />
+            <label className="label-name" for="name">
               <span className="content-name">Name</span>
             </label>
           </div>
 
           <div className="input-area">
-            <input type="email" name="email" required autoComplete="off" />
-            <label className="label-name">
+            <input
+              type="email"
+              name="email"
+              aria-label="Email"
+              required
+              autoComplete="off"
+            />
+            <label className="label-name" for="email">
               <span className="content-name">Email</span>
             </label>
           </div>
@@ -30,14 +42,15 @@ const Contact = ({ title, subtitle, id }) => {
               rows="5"
               required
               autoComplete="off"
+              aria-label="Message"
             />
-            <label className="label-name">
+            <label className="label-name" for="message">
               <span className="content-name">Message</span>
             </label>
           </div>
 
           <div className="input-area button-area">
-            <Button cta="Send" type="submit" />
+            <Button label="Send Contact Form" cta="Send" type="submit" />
           </div>
         </form>
       </div>

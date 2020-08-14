@@ -50,7 +50,13 @@ const Banner = () => {
             goals, all through a stylish theme
           </motion.p>
           <Link to="about" smooth={true} duration={500}>
-            <Button cta="Learn More" anchor={true} href="linking" />
+            <span className="sr-only">Jump to about</span>
+            <Button
+              cta="Learn More"
+              label="Banner Learn More"
+              anchor={true}
+              href="linking"
+            />
           </Link>
         </div>
       </BackgroundImage>

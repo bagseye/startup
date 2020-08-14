@@ -5,9 +5,11 @@ export default [
   {
     icon: <FaLinkedinIn />,
     url: "https://www.linkedin.com/in/morgan-baker-developer-inverness/",
+    name: "LinkedIn",
   },
   {
     icon: <FaGithub />,
     url: "https://github.com/bagseye",
+    name: "GitHub",
   },
 ]

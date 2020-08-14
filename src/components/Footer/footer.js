@@ -23,6 +23,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
+            <span className="sr-only">{item.name}</span>
             {item.icon}
           </a>
         )

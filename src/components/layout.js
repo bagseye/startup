@@ -4,10 +4,12 @@ import "typeface-gothic-a1"
 import "./reset.css"
 import Navbar from "../components/Navbar/navbar"
 import Footer from "../components/Footer/footer"
+import SEO from "../components/Seo/seo"
 
 const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
+      <SEO />
       <Navbar />
       <div className="layout">{children}</div>
       <Footer />

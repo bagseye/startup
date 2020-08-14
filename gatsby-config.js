@@ -9,9 +9,12 @@ const path = require(`path`)
 module.exports = {
   siteMetadata: {
     title: "Startup",
+    titleTemplate: "%s | Helping startups get started",
+    description: "A simple one-page site for new businesses that uses GatsbyJS",
     author: "Morgan Baker",
     image: "/yellow-metal-design-decoration.jpg",
     siteUrl: "https://www.morganbaker.dev",
+    twitterUsername: "@twitter",
   },
   plugins: [
     {
@@ -24,5 +27,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
   ],
 }

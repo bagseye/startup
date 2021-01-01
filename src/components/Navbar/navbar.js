@@ -22,6 +22,7 @@ const Navbar = () => {
           }
           type="button"
           onClick={toggleNav}
+          aria-label="Menu Button"
         >
           <span></span>
           <span></span>

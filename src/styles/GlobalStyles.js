@@ -1,14 +1,16 @@
 import { createGlobalStyle } from "styled-components"
 
-export const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
 * {
     box-sizing: border-box;
-  }
+}
 
+body {
   font-family: "Gothic A1", sans-serif;
-  color: #fff;
-  /* background-color: #060c21; */
-  background: linear-gradient(45deg, #060c21, #0d0139);
+    color: #fff;
+    /* background-color: #060c21; */
+    background: linear-gradient(45deg, #060c21, #0d0139);
+}
 
 
   .content-container {
@@ -68,3 +70,4 @@ export const GlobalStyles = createGlobalStyle`
     white-space: normal !important;
   }
 `
+export default GlobalStyles

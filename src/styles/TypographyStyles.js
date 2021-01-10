@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 import "@fontsource/gothic-a1"
 
-export const TypographyStyles = createGlobalStyle`
+const TypographyStyles = createGlobalStyle`
 
   h1,
   h2,
@@ -49,3 +49,4 @@ export const TypographyStyles = createGlobalStyle`
     }
   }
 `
+export default TypographyStyles

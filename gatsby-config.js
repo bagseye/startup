@@ -12,8 +12,8 @@ module.exports = {
     titleTemplate: "%s | Helping startups get started",
     description: "A simple one-page site for new businesses that uses GatsbyJS",
     author: "Morgan Baker",
+    authorSite: "https://www.morganbaker.dev",
     image: "/yellow-metal-design-decoration.jpg",
-    siteUrl: "https://www.morganbaker.dev",
     twitterUsername: "@twitter",
   },
   plugins: [

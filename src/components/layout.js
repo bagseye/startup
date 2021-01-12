@@ -1,7 +1,7 @@
 import React from "react"
 import "./reset.css"
 import Navbar from "./Navbar"
-import Footer from "../components/Footer/footer"
+import Footer from "./Footer"
 import SEO from "../components/Seo/seo"
 import GlobalStyles from "../styles/GlobalStyles"
 import TypographyStyles from "../styles/TypographyStyles"
@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       <TypographyStyles />
       <Navbar Logo={Logo} />
       <div className="layout">{children}</div>
-      <Footer />
+      <Footer Logo={Logo} />
     </>
   )
 }

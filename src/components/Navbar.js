@@ -1,4 +1,40 @@
+import React, { useState } from "react"
+import links from "../constants/links"
 import styled from "styled-components"
+
+const Navbar = ({ Logo }) => {
+  const [isOpen, setNav] = useState(false)
+
+  const toggleNav = () => {
+    setNav(isOpen => !isOpen)
+  }
+  return (
+    <NavStyles>
+      <div className="masthead flex-container">
+        <img src={Logo} alt="Startup Logo" />
+        <button
+          className={isOpen ? "toggle-btn toggle-btn-active" : "toggle-btn"}
+          type="button"
+          onClick={toggleNav}
+          aria-label="Menu Button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <ul className={isOpen ? "nav-links show-nav" : "nav-links"}>
+        {links.map((item, index) => {
+          return (
+            <li key={index}>
+              <a href="#">{item.text}</a>
+            </li>
+          )
+        })}
+      </ul>
+    </NavStyles>
+  )
+}
 
 export const NavStyles = styled.nav`
   position: fixed;
@@ -141,3 +177,5 @@ export const NavStyles = styled.nav`
     }
   }
 `
+
+export default Navbar

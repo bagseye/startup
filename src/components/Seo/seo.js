@@ -12,7 +12,7 @@ const SEO = ({ title, description, lang, image, article }) => {
     defaultTitle,
     titleTemplate,
     defaultDescription,
-    siteUrl,
+    authorSite,
     defaultImage,
     twitterUsername,
   } = site.siteMetadata
@@ -20,8 +20,8 @@ const SEO = ({ title, description, lang, image, article }) => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
-    url: `${siteUrl}${pathname}`,
+    image: `${authorSite}${image || defaultImage}`,
+    url: `${authorSite}${pathname}`,
   }
 
   return (
@@ -76,7 +76,7 @@ const query = graphql`
         defaultTitle: title
         titleTemplate
         defaultDescription: description
-        siteUrl: siteUrl
+        authorSite: authorSite
         defaultImage: image
         twitterUsername
       }

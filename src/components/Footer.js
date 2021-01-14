@@ -66,25 +66,6 @@ const Footer = ({ Logo }) => {
               </ul>
             )}
 
-            {/* If social menu items are being imported, render this */}
-            {socialMenuItems && (
-              <ul className="footer-menu">
-                {socialMenuItems.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  )
-                })}
-              </ul>
-            )}
-
             {/* If footer menu items are being imported, render this */}
             {footerMenuItems && (
               <ul className="footer-menu">
@@ -93,6 +74,25 @@ const Footer = ({ Logo }) => {
                     <Link to={item.path}>{item.title}</Link>
                   </li>
                 ))}
+              </ul>
+            )}
+
+            {/* If social menu items are being imported, render this */}
+            {socialMenuItems && (
+              <ul className="footer-menu socials">
+                {socialMenuItems.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.icon}
+                      </a>
+                    </li>
+                  )
+                })}
               </ul>
             )}
           </div>
@@ -126,8 +126,8 @@ Footer.propTypes = {
 }
 
 const FooterStyles = styled.footer`
-  padding: calc(var(--spacing) * 2) var(--spacing);
-  background-color: #020015;
+  padding: calc(var(--spacing) * 2);
+  background-color: var(--black);
   font-family: var(--sansSerif);
   font-weight: 300;
   font-style: normal;
@@ -138,6 +138,9 @@ const FooterStyles = styled.footer`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 
     @media (min-width: 768px) {
       flex-direction: row;
@@ -165,7 +168,7 @@ const FooterStyles = styled.footer`
 
     @media (min-width: 768px) {
       margin-top: 10px;
-      margin-bottom: 10px;
+      margin-bottom: var(--spacing);
     }
   }
 
@@ -181,7 +184,7 @@ const FooterStyles = styled.footer`
 
   @media (min-width: 768px) {
     padding-top: calc(var(--spacing) * 4);
-    padding-bottom: calc(var(--spacing) * 4);
+    padding-bottom: calc(var(--spacing) * 2);
   }
 
   .brand-cont,
@@ -190,10 +193,11 @@ const FooterStyles = styled.footer`
   }
 
   .brand-cont {
-    margin-left: auto;
-    margin-right: auto;
     width: 100%;
-    text-align: center;
+
+    @media (min-width: 768px) {
+      width: 25%;
+    }
 
     a {
       display: inline-block;
@@ -205,71 +209,103 @@ const FooterStyles = styled.footer`
     }
   }
 
-  .footer-menu {
-    margin: 0;
-    text-align: center;
-    flex-grow: 1;
-    flex-shrink: 0;
-    margin-bottom: calc(var(--spacing) * 2);
-    padding: 0;
-    margin-bottom: calc(var(--spacing) * 2);
+  .menus-cont {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-    &:last-child {
-      margin-bottom: 0;
+    @media (min-width: 768px) {
+      width: 75%;
+      border-top: 0;
+    }
+  }
+
+  .footer-menu {
+    padding: 0;
+    width: 50%;
+    margin-top: calc(var(--spacing) * 2);
+    margin-bottom: 0;
+
+    > *:first-child {
+      margin-top: 0;
     }
 
-    @media (min-width: 375px) {
-      width: calc(100% / 3);
-      margin-bottom: 0;
+    li {
+      margin-bottom: var(--spacing);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     @media (min-width: 768px) {
-      flex-basis: 125px;
-      flex-grow: 0;
+      width: auto;
+      margin-top: 0;
       margin-bottom: 0;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      padding-left: calc(var(--spacing) * 2);
+      padding-right: calc(var(--spacing) * 5);
 
       li {
         padding-left: calc(var(--spacing) / 2);
       }
-    }
 
-    @media (min-width: 1200px) {
-      flex-basis: 175px;
-    }
-  }
-
-  .brand-cont,
-  .menus-cont,
-  .copy-cont {
-    width: 100%;
-    font-size: 0.85rem;
-  }
-
-  .brand-cont {
-    width: 200px;
-
-    @media (min-width: 600px) {
-      width: 250px;
-      flex-basis: 250px;
-      flex-shrink: 0;
-      flex-grow: 0;
+      &:last-child {
+        padding-right: 0;
+      }
     }
   }
 
   .menus-cont {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
-  .copy {
-    margin: 0;
-    padding: 0;
-    margin-top: calc(var(--spacing) * 2);
-    text-align: center;
+  .socials {
+    display: flex;
 
     li {
-      display: inline;
+      margin-top: 0;
+      padding: 0;
       margin-right: var(--spacing);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      font-size: 24px;
+    }
+  }
+  .copy-cont {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: calc(var(--spacing) * 2);
+    padding-top: calc(var(--spacing) * 2);
+
+    @media (min-width: 768px) {
+      border-top: none;
+    }
+
+    .copy {
+      display: flex;
+      padding: 0;
+      margin-top: 0;
+
+      margin-bottom: 0;
+
+      li {
+        margin-right: var(--spacing);
+      }
+
+      @media (min-width: 768px) {
+        justify-content: center;
+
+        li {
+          margin: 0 calc(var(--spacing) / 2);
+          font-size: 0.75rem;
+        }
+      }
     }
   }
 `

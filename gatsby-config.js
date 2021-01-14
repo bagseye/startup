@@ -11,6 +11,7 @@ module.exports = {
     title: "Startup",
     titleTemplate: "%s | Helping startups get started",
     description: "A simple one-page site for new businesses that uses GatsbyJS",
+    siteUrl: "https://thestartup.netlify.com",
     author: "Morgan Baker",
     authorSite: "https://www.morganbaker.dev",
     image: "/yellow-metal-design-decoration.jpg",

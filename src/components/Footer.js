@@ -14,6 +14,7 @@ const Footer = ({ Logo }) => {
       query {
         site {
           siteMetadata {
+            title
             author
             authorSite
           }
@@ -32,7 +33,7 @@ const Footer = ({ Logo }) => {
             {/* If there is a logo, render this */}
             {Logo && (
               <Link to="/">
-                <img src={Logo} alt={footerData.title} />
+                <img src={Logo} alt={`${footerData.title} logo`} />
               </Link>
             )}
             <address>
@@ -90,6 +91,7 @@ const Footer = ({ Logo }) => {
                       >
                         {item.icon}
                       </a>
+                      <span className="sr-only">{item.name}</span>
                     </li>
                   )
                 })}

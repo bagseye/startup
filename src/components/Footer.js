@@ -90,8 +90,8 @@ const Footer = ({ Logo }) => {
                         rel="noopener noreferrer"
                       >
                         {item.icon}
+                        <span className="sr-only">{item.name}</span>
                       </a>
-                      <span className="sr-only">{item.name}</span>
                     </li>
                   )
                 })}

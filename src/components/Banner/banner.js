@@ -1,23 +1,29 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 import Button from "../Button/button"
 import { Link } from "react-scroll"
 import { motion } from "framer-motion"
 import { BannerStyles } from "../../styles/bannerStyles"
 
 const Banner = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "flames.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
+  const { placeholderImage } = useStaticQuery(
+    graphql`
+      query {
+        placeholderImage: file(relativePath: { eq: "flames.jpg" }) {
+          childImageSharp {
+            gatsbyImageData(quality: 90, width: 1920, formats: [AUTO, WEBP])
           }
         }
       }
-    }
-  `)
+    `
+  )
+
+  const image = getImage(placeholderImage)
+
+  const bgImage = convertToBgImage(image)
 
   const variants = {
     visible: { opacity: 1, y: 0 },
@@ -28,9 +34,11 @@ const Banner = () => {
     <BannerStyles>
       <BackgroundImage
         Tag="section"
+        {...bgImage}
+        preserveStackingContext
         className="hero-image"
-        fluid={data.file.childImageSharp.fluid}
       >
+        <GatsbyImage image={image} />
         <div className="hero-content">
           <motion.h1
             initial="hidden"

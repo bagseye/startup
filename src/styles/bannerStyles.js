@@ -4,9 +4,15 @@ export const BannerStyles = styled.section`
   .gatsby-image-wrapper {
     height: 100vh;
     color: #fff;
+    position: relative;
   }
 
   .hero-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
     text-align: center;
     height: 100%;
     width: 100%;

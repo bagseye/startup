@@ -4,22 +4,19 @@ import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 
 const TextBlockImg = ({ title, children, subtitle, id }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "purple-bg.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  file(relativePath: {eq: "purple-bg.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 90, layout: FULL_WIDTH)
     }
-  `)
+  }
+}
+`)
   return (
     <BackgroundImage
       id="perks"
       Tag="section"
-      fluid={data.file.childImageSharp.fluid}
+      fluid={data.file.childImageSharp.gatsbyImageData}
     >
       <TextBlockImgWrapper>
         <div className="content-container">
@@ -29,7 +26,7 @@ const TextBlockImg = ({ title, children, subtitle, id }) => {
         </div>
       </TextBlockImgWrapper>
     </BackgroundImage>
-  )
+  );
 }
 
 const TextBlockImgWrapper = styled.section`

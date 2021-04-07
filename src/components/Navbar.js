@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import links from "../constants/links"
+import { mainMenuItems } from "../constants/links"
 import styled from "styled-components"
 
 const Navbar = ({ Logo }) => {
@@ -24,7 +24,7 @@ const Navbar = ({ Logo }) => {
         </button>
       </div>
       <ul className={isOpen ? "nav-links show-nav" : "nav-links"}>
-        {links.map((item, index) => {
+        {mainMenuItems.map((item, index) => {
           return (
             <li key={index}>
               <a href="#">{item.text}</a>

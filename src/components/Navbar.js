@@ -27,7 +27,7 @@ const Navbar = ({ Logo }) => {
         {mainMenuItems.map((item, index) => {
           return (
             <li key={index}>
-              <a href="#">{item.text}</a>
+              <a href={`#${item.text}`}>{item.text}</a>
             </li>
           )
         })}

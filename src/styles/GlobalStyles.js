@@ -45,6 +45,10 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Gothic A1", sans-serif;
     color: #fff;

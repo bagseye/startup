@@ -1,4 +1,5 @@
 import React from "react"
+import "@fontsource/quicksand"
 import Banner from "../components/Banner/banner"
 import TextBlock from "../components/TextBlock/textBlock"
 import TextBlockImg from "../components/TextBlockImg/textBlockImg"
@@ -15,10 +16,15 @@ import perk3Img from "../images/friendly-staff.svg"
 
 import { IconContext } from "react-icons"
 import { MdDone, MdClear } from "react-icons/md"
+import BannerModule from "../components/BannerModule/BannerModule"
 
 const HomePage = () => {
   return (
     <>
+      <BannerModule
+        title="Startup"
+        subTitle="It has never been a better time to start. Make your plans and make your moves"
+      />
       <Banner />
       <TextBlock
         id="about"

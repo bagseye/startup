@@ -2,13 +2,19 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
 :root {
+    --borderSpacing: 30px;
+    --bannerTitle: 30px;
+    --bannerSubTitle: 19px;
+    --serif: "Quicksand", serif;
+
+
     --heavyWeight: 900;
     --transMed: 0.3s;
     --transSlow: 0.5s;
     --black: #1f1f1f;
     --charcoal: #3e3e3e;
     --primaryColor: #f441a5;
-    --serif: "Playfair Display", serif;
+    
     --sansSerif: "Gothic A1", sans-serif;
     --h1: 2rem;
     --h2: 1.8rem;
@@ -21,6 +27,10 @@ const GlobalStyles = createGlobalStyle`
     --spacing: 1rem;
 
     @media (min-width: 768px) {
+      --bannerTitle: 42px;
+      --bannerSubTitle: 23px;
+
+
       --h1: 2.6rem;
       --h2: 2.4rem;
       --h3: 1.75rem;
@@ -32,6 +42,11 @@ const GlobalStyles = createGlobalStyle`
     }
 
     @media (min-width: 1200px) {
+      --bannerTitle: 50px;
+      --bannerSubTitle: 28px;
+
+
+
       --h1: 3rem;
       --h2: 2.8rem;
       --h3: 2rem;
@@ -50,7 +65,7 @@ html {
 }
 
 body {
-  font-family: "Gothic A1", sans-serif;
+  font-family: var(--serif);
     color: #fff;
     /* background-color: #060c21; */
     background: linear-gradient(45deg, #060c21, #0d0139);

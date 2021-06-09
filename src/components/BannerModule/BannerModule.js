@@ -30,8 +30,8 @@ const BannerModule = ({ children, title, subTitle, enquire }) => {
           <div className="banner__content">
             {title && <h1>{title}</h1>}
             {subTitle && <h2>{subTitle}</h2>}
-            {enquire && <Button text="Enquire Now" as={Link} to="/contact" />}
-            <button onClick={scrollToArea}></button>
+            {/* {enquire && <Button text="Enquire Now" as={Link} to="/contact" />} */}
+            <Button text="Learn More" onClick={scrollToArea} />
           </div>
         </div>
       </BannerModuleStyles>

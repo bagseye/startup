@@ -1,6 +1,6 @@
 import React from "react"
 import "./reset.css"
-import Navbar from "./Navbar"
+import Navbar from "./Navbar/Navbar"
 import Footer from "./Footer"
 import Seo from "../components/Seo/seo"
 import GlobalStyles from "../styles/GlobalStyles"
@@ -13,7 +13,8 @@ const Layout = ({ children }) => {
       <Seo />
       <GlobalStyles />
       <TypographyStyles />
-      <Navbar Logo={Logo} />
+      <Navbar />
+      {/* <Navbar Logo={Logo} /> */}
       <div className="layout">{children}</div>
       <Footer Logo={Logo} />
     </>

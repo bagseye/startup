@@ -34,10 +34,15 @@ export const BannerModuleStyles = styled.section`
     position: relative;
     z-index: 2;
     width: 100%;
+    max-width: 350px;
     text-align: center;
 
     @media (min-width: 768px) {
-      width: 66vw;
+      max-width: 450px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 650px;
     }
 
     h1 {

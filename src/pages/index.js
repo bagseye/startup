@@ -1,21 +1,21 @@
 import React from "react"
 import "@fontsource/quicksand"
-import Banner from "../components/Banner/banner"
-import TextBlock from "../components/TextBlock/textBlock"
-import TextBlockImg from "../components/TextBlockImg/textBlockImg"
-import Perk from "../components/Perk/perk"
-import Button from "../components/Button/button"
-import Packages from "../components/Packages/packages"
-import Package from "../components/Package/package"
-import Contact from "../components/Contact/contact"
-import { Link } from "react-scroll"
+// import Banner from "../components/Banner/banner"
+// import TextBlock from "../components/TextBlock/textBlock"
+// import TextBlockImg from "../components/TextBlockImg/textBlockImg"
+// import Perk from "../components/Perk/perk"
+// import Button from "../components/Button/button"
+// import Packages from "../components/Packages/packages"
+// import Package from "../components/Package/package"
+// import Contact from "../components/Contact/contact"
+// import { Link } from "react-scroll"
 
-import perk1Img from "../images/speed.svg"
-import perk2Img from "../images/piggy-bank.svg"
-import perk3Img from "../images/friendly-staff.svg"
+// import perk1Img from "../images/speed.svg"
+// import perk2Img from "../images/piggy-bank.svg"
+// import perk3Img from "../images/friendly-staff.svg"
 
-import { IconContext } from "react-icons"
-import { MdDone, MdClear } from "react-icons/md"
+// import { IconContext } from "react-icons"
+// import { MdDone, MdClear } from "react-icons/md"
 import BannerModule from "../components/BannerModule/BannerModule"
 
 const HomePage = () => {
@@ -25,8 +25,8 @@ const HomePage = () => {
         title="Startup"
         subTitle="It has never been a better time to start. Make your plans and make your moves"
       />
-      <Banner />
-      <TextBlock
+      {/* <Banner /> */}
+      {/* <TextBlock
         id="about"
         title="Developing a new business is never easy, but Startup is here to help"
         paragraph="With a super-fast Gatsby powered website you have the perfect platform to get your idea off the ground. Its the perfect template to help turn your idea into a reality."
@@ -34,8 +34,8 @@ const HomePage = () => {
         <Link to="perks" smooth={true} duration={500}>
           <Button label="Tell Me More" cta="Tell Me More!" />
         </Link>
-      </TextBlock>
-      <TextBlockImg
+      </TextBlock> */}
+      {/* <TextBlockImg
         id="perks"
         title="We have the tools to help you suceed"
         subtitle="Startup is perfect for helping to to start and grow your business. As
@@ -62,8 +62,8 @@ const HomePage = () => {
             content="Advisors who are available 24/7, all with exprt knowledge"
           />
         </div>
-      </TextBlockImg>
-      <Packages
+      </TextBlockImg> */}
+      {/* <Packages
         title="Our Packages"
         para="Choose the perfect solution for you. With benefits to suit all budgets Startup can offer amazing value and expert advice"
       >
@@ -143,12 +143,12 @@ const HomePage = () => {
             </Link>
           </Package>
         </IconContext.Provider>
-      </Packages>
-      <Contact
+      </Packages> */}
+      {/* <Contact
         id="contact"
         title="Contact Startup today and see how we can help your business grow"
         subtitle="Every second counts when you're looking to get your new business started. Drop Startup a message and one of our representatives will be in contact"
-      />
+      /> */}
     </>
   )
 }

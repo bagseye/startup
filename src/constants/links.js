@@ -1,6 +1,10 @@
 export const mainMenuItems = [
   {
     path: "/",
+    text: "home",
+  },
+  {
+    path: "/",
     text: "about",
   },
   {

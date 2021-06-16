@@ -20,7 +20,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     ```shell
     # create a new Gatsby site using the startup starter
-    gatsby new my-startup-starter https://github.com/gatsbyjs/startup
+    gatsby new my-startup-starter https://github.com/bagseye/startup.git
     ```
 
 1.  **Start developing.**

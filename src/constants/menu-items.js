@@ -24,7 +24,7 @@ export const mainMenuItems = [
 export const socialMenuItems = [
   {
     icon: <FaLinkedin />,
-    url: "https://www.linkedin.com/in/morgan-baker-developer-inverness",
+    url: "https://www.linkedin.com/in/morgan-baker-development",
     name: "LinkedIn",
   },
   {
